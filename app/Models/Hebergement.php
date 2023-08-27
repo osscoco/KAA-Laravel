@@ -11,6 +11,12 @@ class Hebergement extends Model
 	protected $table = 'hebergements';
 
 	protected $fillable = [
-		'label'
+		'label',
+        'nbPlaces',
+        'prix'
 	];
+
+    protected $casts = [
+        'prix' => 'int'
+    ];
 }

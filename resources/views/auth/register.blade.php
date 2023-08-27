@@ -53,7 +53,7 @@
 <x-guest-layout>
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm" style="width: 55%;">
-            <img class="mx-auto h-10 w-auto" src="{{asset("storage/logo.png")}}" alt="Kayak aventure">
+            <img class="mx-auto h-10 w-auto" src="{{ asset('storage/logo.png') }}" style="width: 55%; height: 55%;" alt="Kayak aventure">
         </div>
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             <x-auth-session-status class="mb-4" :status="session('status')" />

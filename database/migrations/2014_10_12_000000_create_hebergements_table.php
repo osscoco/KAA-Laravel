@@ -15,6 +15,8 @@ return new class extends Migration
         Schema::create('hebergements', function (Blueprint $table) {
             $table->id();
             $table->string('label');
+            $table->integer('nbPlaces');
+            $table->integer('prix')->nullable();
             $table->timestamps();
         });
     }

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Managers\ParcourManager;
 
-class ProfileController extends Controller
+class DashboardController extends Controller
 {
     public function __construct(protected ParcourManager $parcourManager){}
 
@@ -19,9 +19,9 @@ class ProfileController extends Controller
      */
     public function dashboard(Request $request): View
     {
-
-        return view('profile.edit', [
+        return view('dashboard', [
             'user' => $request->user(),
+            'ListeParcours' => $this->parcourManager->getAllParcours()
         ]);
     }
 }

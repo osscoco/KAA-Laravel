@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class ParcourManager
 {
-    public function getAllParcour()
+    public function getAllParcours()
     {
         return Parcours::all();
     }
